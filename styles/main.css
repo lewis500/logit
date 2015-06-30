@@ -1,0 +1,56 @@
+@import "../node_modules/angular-material/angular-material.css";
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic);
+body {
+  font-family: 'Vollkorn', serif;
+  padding-top: 5px;
+  font-size: 14px;
+  padding-left: 8%;
+}
+line,
+path {
+  pointer-events: none;
+}
+.axis path.domain {
+  display: none;
+}
+rect.background {
+  fill: #eeeeee;
+}
+path.arr-line,
+path.cost-line,
+path.exit-line,
+path.target-line,
+path.wish-line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+path.arr-line {
+  stroke: #03a9f4;
+}
+path.cost-line {
+  stroke: #e91e63;
+}
+path.exit-line {
+  stroke: #8bc34a;
+}
+line,
+path {
+  pointer-events: none;
+}
+path.fun {
+  stroke-width: 1.5px;
+  fill: none;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: white;
+}
+.axis text {
+  font-size: 14px;
+  font-style: italic;
+}
+.axis g.tick line {
+  stroke-width: 1.3px;
+  stroke-dasharray: 2, 1.6;
+}

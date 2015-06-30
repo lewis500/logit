@@ -1,0 +1,13 @@
+'use strict'
+angular = require 'angular'
+d3 = require 'd3'
+app = angular.module 'mainApp', [require 'angular-material']
+	.directive 'shifter' , require './directives/shifter'
+	.directive 'cumChart', require './components/cumulative/cumChart'
+	.directive 'mainDer', require './components/main/main'
+	.directive 'horAxisDer', require './directives/xAxis'
+	.directive 'verAxisDer', require './directives/yAxis'
+	.directive 'shifter' , require './directives/shifter'
+	.directive 'behavior', require './directives/behavior'
+	.directive 'datum', require './directives/datum'
+	.directive 'd3Der', require './directives/d3Der'
