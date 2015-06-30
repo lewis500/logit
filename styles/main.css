@@ -20,7 +20,8 @@ path.arr-line,
 path.cost-line,
 path.exit-line,
 path.target-line,
-path.wish-line {
+path.wish-line,
+.v-line {
   fill: none;
   stroke-width: 1.5px;
 }
@@ -32,6 +33,9 @@ path.cost-line {
 }
 path.exit-line {
   stroke: #8bc34a;
+}
+path.v-line {
+  stroke: #e91e63;
 }
 line,
 path {

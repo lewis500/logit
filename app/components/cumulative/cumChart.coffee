@@ -12,7 +12,7 @@ template = """
 			<g class='g-lines'>
 				<path class='arr-line'  d3-der='{d: vm.arr_line(vm.minutes)}' />
 				<path class='exit-line' d3-der='{d: vm.exit_line(vm.minutes)}' />
-				<path class='exit-line' d3-der='{d: vm.v_line(vm.minutes)}' />
+				<path class='v-line' d3-der='{d: vm.v_line(vm.minutes)}' />
 			</g>
 		</g>
 	</svg>
