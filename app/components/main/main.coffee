@@ -19,13 +19,13 @@ template = '''
 		  <div flex="25" layout layout-align="center center">
 		    <span class="md-body-1">beta</span>
 		  </div>
-		  <md-slider md-discrete flex min="0.1" max=".9" ng-model="vm.S.beta" step='.1'></md-slider>
+		  <md-slider md-discrete flex min="0.1" max=".8" ng-model="vm.S.beta" step='.05'></md-slider>
 		</div>
 		<div layout>
 		  <div flex="25" layout layout-align="center center">
 		    <span class="md-body-1">gamma</span>
 		  </div>
-		  <md-slider md-discrete flex min="1.2" max="3" ng-model="vm.S.gamma" step='.1'></md-slider>
+		  <md-slider md-discrete flex min="1.2" max="3" ng-model="vm.S.gamma" step='.05'></md-slider>
 		</div>
 	</div>
 '''

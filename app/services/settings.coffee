@@ -1,11 +1,11 @@
 'use strict'
 
 module.exports = 
-	wish_time: 70
-	num_minutes: 100
+	wish_time: 50
+	num_minutes: 80
 	L: 1.5
 	u: .2
-	R: .15
+	R: .1
 	N: 1
 	kj: .4
 	vf: .4
