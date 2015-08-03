@@ -1,5 +1,5 @@
 d3 = require('d3')
-Settings = require '../../services/settings'
+S = require '../../services/settings'
 PlotCtrl = require '../../models/plotCtrl'
 Data = require '../../services/data'
 
@@ -12,19 +12,21 @@ template = """
 			<g class='g-lines'>
 				<path class='arr-line'  d3-der='{d: vm.arr_line(vm.minutes)}' />
 				<path class='exit-line' d3-der='{d: vm.exit_line(vm.minutes)}' />
-				<path class='v-line' d3-der='{d: vm.v_line(vm.minutes)}' />
+				<line class='wish' d3-der='{y1: vm.Ver(0), y2: 0, x1: vm.Hor(vm.S.wish_time), x2: vm.Hor(vm.S.wish_time)}'></line>
 			</g>
 		</g>
 	</svg>
 """
+				# <path class='v-line' d3-der='{d: vm.v_line(vm.minutes)}' />
 
 class cumCtrl extends PlotCtrl
 	constructor: (@scope)->
 		super @scope
 		@minutes = Data.minutes
 		@Ver.domain [0, .05] 
-		@Ver2 = @Ver.copy().domain [0,Settings.vf]
-		@Hor.domain [0, Settings.num_minutes]
+		@Ver2 = @Ver.copy().domain [0,S.vf]
+		@Hor.domain [0, S.num_minutes]
+		@S = S
 
 		@arr_line = d3.svg.line()
 			.y (d)=> @Ver d.arrivals

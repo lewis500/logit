@@ -3,7 +3,7 @@ Minute = require '../models/minute'
 _ = require 'lodash'
 
 class Data
-	constructor: ()->
+	constructor: ->
 		@minutes = [0...S.num_minutes].map (time)=> 
 				newMinute = new Minute time
 

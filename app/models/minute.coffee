@@ -19,8 +19,8 @@ class Minute
 		@exits = 0
 		@next = undefined
 		@prev = undefined
-		delta = S.wish_time - @time
-		@sp = Math.max delta*S.beta, -delta*S.gamma
+		@delta = S.wish_time - @time
+		# @sp = Math.max delta*S.beta, -delta*S.gamma
 		# @calc_cost()
 
 	set_next: (d)-> 
@@ -39,12 +39,13 @@ class Minute
 	pass_k: (k)-> @k += k
 
 	calc_cost: ->
+		sp = Math.max @delta*S.beta, -@delta*S.gamma
 		if @time == ( S.num_minutes-1)
-			@c = S.alpha * S.L / @v + @sp
+			@c = S.alpha * S.L / @v + sp
 		else
 			dt = 1
 			p = @v/S.L * dt
-			@c = p*@sp + (1-p)*(S.alpha * dt + @next.c)
+			@c = p*sp + (1-p)*(S.alpha * dt + @next.c)
 		# @c = S.alpha *
 
 	choose: (denominator) ->

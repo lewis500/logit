@@ -13,6 +13,11 @@ path {
 .axis path.domain {
   display: none;
 }
+line.wish {
+  stroke-dasharray: 2,2;
+  stroke: #e91e63;
+  stroke-width: 1.5px;
+}
 rect.background {
   fill: #eeeeee;
 }
